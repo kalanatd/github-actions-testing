@@ -2,8 +2,8 @@ name: Actions Workflow
 
 on: [push]
 env:
-  PYLAMA_VERSION: 7.7.1
-  
+  PYLAMA_VERSION: 8.4.1
+
 jobs: 
   run-github-actions: 
     runs-on: ubuntu-latest
