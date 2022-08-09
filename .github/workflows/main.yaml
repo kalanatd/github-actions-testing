@@ -1,5 +1,8 @@
 name: pylama test
 on: [push]
+  secrets:
+    GH_TOKEN:
+      required: true
 env:
   PYLAMA_VERSION: 7.7.1
 jobs:
