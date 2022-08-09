@@ -31,3 +31,6 @@ jobs:
       - name: run pylama
         run: |
           pylama .
+      - name: bash
+        run: |
+          ls -al
