@@ -9,6 +9,7 @@ jobs:
   run-github-actions-reusability:
     uses: kalanatd/github-actions-reusable-workflows/.github/workflows/checkout-action.yaml@main
   list-files:
+    runs-on: ubuntu-latest
     steps:
       - name: List Files
         run: |
