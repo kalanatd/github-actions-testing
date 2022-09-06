@@ -8,6 +8,7 @@ env:
 jobs: 
   run-github-actions-reusability:
     uses: kalanatd/github-actions-reusable-workflows/.github/workflows/checkout-action.yaml@main
+  list-files:
     steps:
       - name: List Files
         run: |
