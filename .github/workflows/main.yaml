@@ -21,7 +21,7 @@ jobs:
           # git clone git@github:$GITHUB_REPOSITORY
           # git checkout $GITHUB_SHA
       - name: Checkout 
-        uses: kalanatd/github-actions-reusable-workflows/.github/workflows/checkout-action.yaml
+        uses: kalanatd/github-actions-reusable-workflows/.github/workflows/checkout-action.yaml@main
       - name: List Files After Checkout
         run: |
           pwd
