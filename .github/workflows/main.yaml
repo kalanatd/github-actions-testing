@@ -6,11 +6,10 @@ env:
   PYFLAKES_VERSION: 2.4.0
 
 jobs: 
-  run-github-actions: 
-    runs-on: ubuntu-latest
-    container: python:3.7
+  run-github-actions-reusability:
+    uses: kalanatd/github-actions-reusable-workflows/.github/workflows/checkout-action.yaml@main
     steps:
-      - name: List Files 
+      - name: List Files
         run: |
           pwd
           ls -a
@@ -20,8 +19,6 @@ jobs:
           echo "${{ github.token }}"
           # git clone git@github:$GITHUB_REPOSITORY
           # git checkout $GITHUB_SHA
-      - name: Checkout 
-        uses: kalanatd/github-actions-reusable-workflows/.github/workflows/checkout-action.yaml@main
       - name: List Files After Checkout
         run: |
           pwd
