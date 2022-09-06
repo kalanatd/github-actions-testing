@@ -21,7 +21,7 @@ jobs:
           # git clone git@github:$GITHUB_REPOSITORY
           # git checkout $GITHUB_SHA
       - name: Checkout 
-        uses: actions/checkout@v1
+        uses: kalanatd/github-actions-reusable-workflows/.github/workflows/checkout-action.yaml
       - name: List Files After Checkout
         run: |
           pwd
@@ -34,9 +34,6 @@ jobs:
         run: |
           pip3 install pylama==${{env.PYLAMA_VERSION}}
           pylama --version
-      - name: run pylama
-        run: |
-          pylama .
       - name: bash
         run: |
           ls -al
